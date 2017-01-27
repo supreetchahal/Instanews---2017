@@ -1,0 +1,29 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin logoSize {
+  height: 400px;
+  width: 400px;
+}
+
+@mixin deleteDefaultSelector {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+@mixin copyright {
+  color: gray;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 100px;
+}
+
+@mixin media($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}

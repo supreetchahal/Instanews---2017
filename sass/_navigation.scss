@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.nytimes {
+  @include flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
+    align-items: center;
+    @include media($tablet) {
+      flex-direction: row;
+    }
+    @include media($desktop) {
+      justify-content: flex-start;
+    }
+}
+
+.description {
+    @include flex;
+    color: $text-color;
+    padding: 20px;
+    font-family: sans-serif;
+    // Don't forget to download fonts and change font family.
+}
+
+.selection {
+    background: url("http://i62.tinypic.com/15xvbd5.png") no-repeat 96% 0;
+    height: 30px;
+    overflow: hidden;
+    width: 240px;
+    border-radius: 5px;
+    color: $text-color;
+    font-size: 12px;
+    padding-left: 10px;
+    transition: all ease 0.2s;
+}
+
+.selection:hover {
+  border: 2px solid white;
+  transform: scale(1.2);
+}
+
+.button {
+    @include flex;
+}
+
+select {
+  @include deleteDefaultSelector;
+}
