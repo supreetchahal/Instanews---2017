@@ -55,6 +55,8 @@ body {
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
+  display: block;
+  padding: 30px;
   -ms-flex-direction: column;
       flex-direction: column;
   text-align: center;
@@ -105,6 +107,31 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; }
+
+footer {
+  padding: 30px;
+  display: block; }
+
+.stories {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: end;
+      justify-content: flex-end; }
+  .stories li {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+        align-items: flex-end;
+    height: 420px;
+    background-position: 100%;
+    background-size: cover; }
+    .stories li p {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 22px;
+      padding: 10px; }
 
 .copyright {
   display: -ms-flexbox;
