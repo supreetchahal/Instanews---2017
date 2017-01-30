@@ -66,6 +66,8 @@ body {
       align-items: center; }
   @media only screen and (min-width: 600px) {
     .nytimes {
+      display: -ms-flexbox;
+      display: flex;
       -ms-flex-direction: row;
           flex-direction: row; } }
   @media only screen and (min-width: 1000px) {
@@ -108,6 +110,13 @@ select {
   -moz-appearance: none;
   appearance: none; }
 
+.logo {
+  display: inline;
+  width: 35%;
+  max-width: 300px;
+  height: auto;
+  margin: 0; }
+
 footer {
   padding: 30px;
   display: block; }
@@ -115,8 +124,8 @@ footer {
 .stories {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
   -ms-flex-pack: end;
       justify-content: flex-end; }
   .stories li {
@@ -125,13 +134,23 @@ footer {
     -ms-flex-align: end;
         align-items: flex-end;
     height: 420px;
-    background-position: 100%;
+    width: 100%;
     background-size: cover; }
+    @media only screen and (min-width: 600px) {
+      .stories li {
+        width: 50%; } }
+    @media only screen and (min-width: 1000px) {
+      .stories li {
+        width: 25%; } }
     .stories li p {
       background-color: rgba(0, 0, 0, 0.5);
       color: white;
       font-size: 22px;
-      padding: 10px; }
+      padding: 0px;
+      height: 0;
+      transition: all ease 0.3s; }
+  .stories li:hover p {
+    height: 100px; }
 
 .copyright {
   display: -ms-flexbox;

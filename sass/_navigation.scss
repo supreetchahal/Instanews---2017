@@ -14,7 +14,8 @@ body {
     flex: 1;
     align-items: center;
     @include media($tablet) {
-        flex-direction: row;
+      display: flex;
+      flex-direction: row;
     }
     @include media($desktop) {
         justify-content: flex-start;
@@ -54,6 +55,15 @@ select {
     @include deleteDefaultSelector;
 }
 
+.logo {
+  display: inline;
+  width: 35%;
+  max-width: 300px;
+  height: auto;
+  margin: 0;
+
+}
+
 footer {
   padding: 30px;
   display: block;
@@ -61,7 +71,7 @@ footer {
 
 .stories {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   justify-content: flex-end;
 
 
@@ -69,15 +79,26 @@ footer {
       display: flex;
       align-items: flex-end;
       height: 420px;
-      background-position: 100%;
+      width: 100%;
       background-size: cover;
+      @include media($tablet) {
+        width: 50%;
+      }
+      @include media($desktop){
+        width: 25%;
+      }
 
         p {
           background-color: rgba(0,0,0,0.5);
           color: white;
           font-size: 22px;
-          padding: 10px;
+          padding: 0px;
+          height: 0;
+          transition: all ease 0.3s;
         }
+    }
+    li:hover p {
+      height: 100px;
     }
 
 }
