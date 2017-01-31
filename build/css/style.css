@@ -42,6 +42,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: 'open_sanslight';
+  src: url("OpenSans-Light-webfont.eot");
+  src: url("OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("OpenSans-Light-webfont.woff") format("woff"), url("OpenSans-Light-webfont.ttf") format("truetype"), url("OpenSans-Light-webfont.svg#open_sanslight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   background-color: black;
   display: -ms-flexbox;
@@ -125,8 +132,9 @@ select {
   appearance: none; }
 
 footer {
-  padding: 30px;
-  display: block; }
+  padding-top: 150px;
+  position: fixed center;
+  bottom: 0; }
 
 .stories {
   display: -ms-flexbox;
@@ -153,10 +161,12 @@ footer {
       .stories li {
         width: 25%; } }
     .stories li p {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.6);
+      font-family: 'open_sanslight', sans-serif;
+      font-weight: normal;
       color: white;
       position: absolute;
-      font-size: 22px;
+      font-size: 20px;
       padding: 0;
       height: 0;
       bottom: 0;
