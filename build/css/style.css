@@ -55,21 +55,19 @@ body {
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
-  display: block;
-  padding: 30px;
   -ms-flex-direction: column;
       flex-direction: column;
   text-align: center;
-  -ms-flex: 1;
-      flex: 1;
   -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+  margin: 200px; }
   @media only screen and (min-width: 600px) {
     .nytimes {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-direction: row;
-          flex-direction: row; } }
+          flex-direction: row;
+      margin: 60px; } }
   @media only screen and (min-width: 1000px) {
     .nytimes {
       -ms-flex-pack: start;
@@ -105,17 +103,26 @@ body {
   -ms-flex-pack: center;
       justify-content: center; }
 
+.logo {
+  width: auto;
+  height: auto; }
+  @media only screen and (min-width: 600px) {
+    .logo img {
+      width: 40%;
+      height: auto; } }
+  @media only screen and (min-width: 1000px) {
+    .logo img {
+      width: 40%;
+      height: auto; } }
+
+.news-link {
+  height: 100%;
+  width: 100%; }
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; }
-
-.logo {
-  display: inline;
-  width: 35%;
-  max-width: 300px;
-  height: auto;
-  margin: 0; }
 
 footer {
   padding: 30px;
@@ -131,8 +138,11 @@ footer {
   .stories li {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: end;
-        align-items: flex-end;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    position: relative;
     height: 420px;
     width: 100%;
     background-size: cover; }
@@ -145,12 +155,15 @@ footer {
     .stories li p {
       background-color: rgba(0, 0, 0, 0.5);
       color: white;
+      position: absolute;
       font-size: 22px;
-      padding: 0px;
+      padding: 0;
       height: 0;
+      bottom: 0;
       transition: all ease 0.3s; }
   .stories li:hover p {
-    height: 100px; }
+    height: 150px;
+    padding: 5px; }
 
 .copyright {
   display: -ms-flexbox;
