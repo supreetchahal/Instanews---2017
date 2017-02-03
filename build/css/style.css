@@ -57,6 +57,11 @@ body {
   -ms-flex-direction: column;
       flex-direction: column; }
 
+.loader {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto; }
+
 .nytimes {
   display: -ms-flexbox;
   display: flex;
