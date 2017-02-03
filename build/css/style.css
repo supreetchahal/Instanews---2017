@@ -158,7 +158,8 @@ footer {
     position: relative;
     height: 420px;
     width: 100%;
-    background-size: cover; }
+    background-size: cover;
+    overflow: hidden; }
     @media only screen and (min-width: 600px) {
       .stories li {
         width: 50%; } }
