@@ -57,6 +57,11 @@ body {
   -ms-flex-direction: column;
       flex-direction: column; }
 
+.loader {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto; }
+
 .nytimes {
   display: -ms-flexbox;
   display: flex;
@@ -153,7 +158,8 @@ footer {
     position: relative;
     height: 420px;
     width: 100%;
-    background-size: cover; }
+    background-size: cover;
+    overflow: hidden; }
     @media only screen and (min-width: 600px) {
       .stories li {
         width: 50%; } }

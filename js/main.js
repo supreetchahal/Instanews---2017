@@ -29,8 +29,8 @@ $(document).ready(function() {
                 $.each(filteredNews, function(item, index) {
                     var img = index.multimedia[4].url;
                     listItem += '<li class="itemImage" style="background-image:url(' + img + ')">';
-                    listItem += '<a class="news-link" href="' + index.url + '"> <p>' + index.abstract + '</p>';
-                    listItem += '</a></li>';
+                    listItem += '<a class="news-link" href="' + index.url + '"></a> <p>' + index.abstract + '</p>';
+                    listItem += '</li>';
                 })
 
                 $('.stories').append(listItem);

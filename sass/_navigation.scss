@@ -17,6 +17,12 @@ body {
     flex-direction: column;
 }
 
+.loader{
+  width:80px;
+  height:80px;
+  margin: 0 auto;
+}
+
 .nytimes {
     @include flex;
     flex-direction: column;
@@ -107,6 +113,7 @@ footer {
         height: 420px;
         width: 100%;
         background-size: cover;
+        overflow: hidden;
         @include media($tablet) {
             width: 50%;
         }
